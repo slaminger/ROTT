@@ -1,0 +1,22 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 10fb06142..fde02ab86 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -67,7 +67,7 @@ endif()
+ 
+ if(NOT ANDROID AND NOT IOS)
+ 	if(ARM_DEVICE OR SIMULATOR)
+-		set(USING_EGL ON)
++		set(USING_EGL OFF)
+ 	endif()
+ endif()
+ 
+@@ -86,7 +86,7 @@ endif()
+ 
+ # We only support Vulkan on Unix, Android and Windows.
+ if(ANDROID OR WIN32 OR (UNIX AND NOT APPLE AND NOT ARM_NO_VULKAN))
+-	set(VULKAN ON)
++	set(VULKAN OFF)
+ endif()
+ 
+ if(GOLD)

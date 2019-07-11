@@ -1,0 +1,51 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:       gpu-freqboost-tinker
+# Required-Start: $remote_fs $syslog
+# Required-Stop:
+# Default-Start:  2 3 4 5
+# Default-Stop:
+# Short-Description: Set maximum GPU clock
+# Description: Detect and set max GPU clock
+### END INIT INFO
+#
+
+DESC="GPU Frequency Boost"
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# use lsb-base
+. /lib/lsb/init-functions
+
+case "$1" in
+start | force-reload | restart | reload)
+	log_action_begin_msg "$DESC: Setting GPU Clock"
+
+	gpu_freqs='/sys/class/misc/mali0/device/devfreq/devfreq0/available_frequencies'
+
+	if [ -f $gpu_freqs ]; then
+		GPU_CLOCK_MAX=$(cat $gpu_freqs | tr " " "\n" | sort -n | tail -n1)
+
+		log_action_cont_msg "Setting governor: userspace"
+		echo "userspace" >/sys/class/misc/mali0/device/devfreq/devfreq0/governor
+
+		log_action_cont_msg "Setting max clock: $GPU_CLOCK_MAX"
+		echo $GPU_CLOCK_MAX >/sys/class/misc/mali0/device/devfreq/devfreq0/min_freq
+		echo $GPU_CLOCK_MAX >/sys/class/misc/mali0/device/devfreq/devfreq0/max_freq
+
+	else
+		log_action_cont_msg "Disabled, Mali devfreq support not available in this kernel"
+	fi
+
+	log_action_end_msg 0
+
+	;;
+stop) ;;
+
+*)
+	echo "Usage: $0 {start|stop|restart|reload|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0

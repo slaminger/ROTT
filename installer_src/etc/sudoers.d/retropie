@@ -1,0 +1,7 @@
+%retropie ALL=(ALL:ALL) NOPASSWD: /sbin/rmmod xpad
+%retropie ALL=(ALL:ALL) NOPASSWD: /sbin/insmod xpad
+%retropie ALL=(ALL:ALL) NOPASSWD: /sbin/modprobe xpad
+%retropie ALL=(ALL:ALL) NOPASSWD: /sbin/modprobe -r xpad
+%retropie ALL=(ALL:ALL) NOPASSWD: /bin/systemctl restart keyboard-setup
+%retropie ALL=(ALL:ALL) NOPASSWD: /usr/sbin/service keyboard-setup restart
+%retropie ALL=(ALL:ALL) NOPASSWD: /opt/retropie/emulators/retroarch/bin/retroarch

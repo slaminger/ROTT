@@ -1,0 +1,11 @@
+85c85
+<     aoss "$rootdir/emulators/reicast/bin/reicast" "${params[@]}" >/dev/null
+---
+>     aoss "$rootdir/emulators/reicast-latest-tinker/bin/reicast" "${params[@]}" >/dev/null
+87c87
+<     "$rootdir/emulators/reicast/bin/reicast" "${params[@]}" >/dev/null
+---
+>     "$rootdir/emulators/reicast-latest-tinker/bin/reicast" "${params[@]}" >/dev/null
+88a89,90
+> 
+> sudo systemctl restart keyboard-setup
