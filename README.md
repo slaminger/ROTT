@@ -10,7 +10,7 @@ You only need the Armbian-Setup .sh file to install additional drivers and packa
 
 ## Release Images
 
-See the [Releases](www.techtoytinker.com) page for the current release images.
+See www.techtoytinker.com for the current release images.
 
 A bare image, an image with RetroPie preinstalled.
 
