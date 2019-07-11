@@ -6,17 +6,17 @@ The TinkerRetroPie install builder is currently tested and developed on Armbian 
 
 The provided images are tested on a Tinker Board S.
 
+You only need the Armbian-Setup .sh file to install additional drivers and packages such as libmali.
+
 ## Release Images
 
-See the [Releases](https://github.com/EriHoss/TinkerRetroPie/releases) page for the current release images.
+See the [Releases](www.techtoytinker.com) page for the current release images.
 
-A bare image, an image with RetroPie preinstalled, and the current installer tarball is attached to each release.
+A bare image, an image with RetroPie preinstalled.
 
 **Note:** Make sure to unzip the provided image files before flashing them.
 
-**Armbian_5.X_Tinkerboard_Debian_stretch_next_4.14.X.img.zip** contains the bare customized Armbian OS image with no RetroPie installed.
-
-**Armbian_5.X_Tinkerboard_Debian_stretch_next_4.14.X_TinkerRetroPie_vX.Y.Z.img.zip** contains the customized Armbian OS image with RetroPie already installed for you.
+** Thank you to EriHoss for all his tinkerboard contributions, some of which have been used here, also a thank you to the former member Crash Cortez.
 
 Release images with RetroPie installed will have the following credentials:
 
@@ -24,10 +24,10 @@ Release images with RetroPie installed will have the following credentials:
 # tinker is the user RetroPie is installed under.
 
 User: tinker
-Password: 1234
+Password: tinkerboard
 
 User: root
-Password: 1234
+Password: tinkerboard
 
 ```
 
@@ -39,14 +39,6 @@ Release images **without** RetroPie installed can be logged into with:
 User: root
 Password: 1234
 
-
-```
-
-**TinkerRetroPieInstaller.tar.gz** is the installer tarball that can be used to install RetroPie on the bare image if you want to do it yourself.
-
-```bash
-
-tar -xvf TinkerRetroPieInstaller.tar.gz
 
 # The install script is entirely automated, no RetroPie prompts will occur.
 
