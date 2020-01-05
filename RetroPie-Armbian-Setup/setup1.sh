@@ -215,12 +215,7 @@ install_basis () {
         cd ~
         rm -rf wayland
         
-        echo ""
-        echo "########################"
-        echo "##  Cloning RetroPie  ##"
-        echo "########################"
-        echo ""
-        git clone --depth=1 https://github.com/slaminger/RetroPie-On-The-Tinkerboard
+      
 
         echo "############################"
         echo "##  Installing gpu boost  ##"
