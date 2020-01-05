@@ -290,7 +290,7 @@ popd() {
             fi
         popd
     else
-        git clone --branch "$RETROPIE_BRANCH" https://github.com/RetroPie-Expanded/RetroPie-Setup "$RETROPIE_SETUP_DIR"
+        git clone --branch "$RETROPIE_BRANCH" https://github.com/slaminger/RetroPie-Setup-1 "$RETROPIE_SETUP_DIR"
 
         if [[ "$RETROPIE_COMMIT" ]]; then
             echo "Rewinding RetroPie-Setup to commit: $RETROPIE_COMMIT"
