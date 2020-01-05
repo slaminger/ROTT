@@ -6,7 +6,9 @@ The TinkerRetroPie install builder is currently tested and developed on Armbian 
 
 The provided images are tested on a Tinker Board S.
 
-You only need the Armbian-Setup .sh file to install additional drivers and packages such as libmali.
+You need the ROTT/RetroPie-Armbian-Setup/setup1.sh file to install additional drivers and packages such as libmali.
+then go into installer_src and use install.sh
+once both steps are completed you will be greeted by the retropie screen where you can build the core files and emulators. 
 
 ## Release Images
 
