@@ -40,9 +40,8 @@ User: root
 Password: 1234
 
 
-# The install script is entirely automated, no RetroPie prompts will occur.
+# The install script is mostly automated..
 
-sudo ./TinkerRetroPieInstaller/install.sh
 
 ```
 
