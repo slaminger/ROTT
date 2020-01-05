@@ -1,7 +1,7 @@
 # Armbian-Setup-for-RetroPie
 Use this .sh to install additional drivers if you are having issues.
 
-setup.sh is a bash script for retropie on the  tinkerboard
+setup1.sh is a bash script for retropie on the  tinkerboard
 
 all other files are the changes i've make for baground music or other extra
 
