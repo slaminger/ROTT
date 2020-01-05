@@ -404,7 +404,7 @@ install_optional () {
         echo "##  Installation completed  ##"
         echo "##############################"
         echo ""
-        echo "Run 'sudo ~/RetroPie-Setup/retropie_setup.sh' and then reboot your system. Then you can install the packages from RetroPie-Setup."
+        echo "Run 'sudo ~ROTT/installer_src/install.sh'. Then you can install the packages from RetroPie-Setup."
 fi
 }
 
